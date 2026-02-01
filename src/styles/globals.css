@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background: #FAF9F6;
+  --foreground: #1A1A1A;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(26, 26, 26, 0.05);
+  --muted: rgba(26, 26, 26, 0.4);
+}
+
+.dark {
+  --background: #0A0A0A;
+  --foreground: #FAF9F6;
+  --card-bg: #1A1A1A;
+  --card-border: rgba(250, 249, 246, 0.1);
+  --muted: rgba(250, 249, 246, 0.4);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-muted-text: var(--muted);
+  --color-archive-blue: #0047FF;
+  --color-off-white: #FAF9F6;
+  --color-soft-beige: #F2EFE9;
+  --color-charcoal: #1A1A1A;
+  --color-indigo: #1E213D;
+  --color-muted-red: #B04A4A;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-arabic: "Cairo", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
